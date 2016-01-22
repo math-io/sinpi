@@ -41,7 +41,7 @@ val = sinPi( 0.9 );
 var linspace = require( 'compute-linspace' );
 var sinPi = require( 'math-sinpi' );
 
-var x = linspace( 0, 2*Math.PI, 100 );
+var x = linspace( 0, 2, 100 );
 var i;
 
 for ( i = 0; i < x.length; i++ ) {
