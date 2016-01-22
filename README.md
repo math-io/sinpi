@@ -27,7 +27,7 @@ Computes the [sine][sine] of `number` `x` multiplied with `π` (in radians), i.e
 var val = sinPi( 0 );
 // returns 0
 
-val = sinPi( 0.5);
+val = sinPi( 0.5 );
 // returns 1
 
 val = sinPi( 0.9 );
