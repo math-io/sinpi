@@ -18,9 +18,10 @@ $ npm install math-sinpi
 var sinPi = require( 'math-sinpi' );
 ```
 
-#### sin( x )
+#### sinPi( x )
 
-Computes the [sine][sine] of `number` multiplied with `π` (in radians).
+Computes the [sine][sine] of `number` `x` multiplied with `π` (in radians), i.e. `sin(π * x)`.
+
 
 ``` javascript
 var val = sinPi( 0 );
