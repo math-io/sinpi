@@ -112,7 +112,7 @@ $ make view-browser-tests
 Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 
 
-[npm-image]: http://img.shields.io/npm/v/math-sin.svg
+[npm-image]: http://img.shields.io/npm/v/math-sinpi.svg
 [npm-url]: https://npmjs.org/package/math-sinpi
 
 [build-image]: http://img.shields.io/travis/math-io/sinpi/master.svg
