@@ -39,7 +39,7 @@ val = sinPi( 0.9 );
 
 ``` javascript
 var linspace = require( 'compute-linspace' );
-var sinPi = require( './../lib' );
+var sinPi = require( 'math-sinpi' );
 
 var x = linspace( 0, 2*Math.PI, 100 );
 var i;
