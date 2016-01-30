@@ -10,9 +10,7 @@ var sinpi = require( './../lib/' );
 
 // FIXTURES //
 
-var output = require( './fixtures/output.json' );
-var data = output.data;
-var expected = output.expected;
+var data = require( './fixtures/data.json' );
 
 
 // TESTS //
