@@ -2,7 +2,7 @@ sinpi
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url] [![Coverage Status][coverage-image]][coverage-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes the [sine][sine] of a number times π.
+> Computes the [sine][math-sin] of a number times [π][const-pi].
 
 
 ## Installation
@@ -15,22 +15,22 @@ $ npm install math-sinpi
 ## Usage
 
 ``` javascript
-var sinPi = require( 'math-sinpi' );
+var sinpi = require( 'math-sinpi' );
 ```
 
-#### sinPi( x )
+#### sinpi( x )
 
-Computes the [sine][sine] of `number` `x` multiplied with `π` (in radians), i.e. `sin(π * x)`.
+Computes `sin(πx)` more accurately than `sin(pi*x)`, especially for large `x`.
 
 
 ``` javascript
-var val = sinPi( 0 );
+var val = sinpi( 0 );
 // returns 0
 
-val = sinPi( 0.5 );
+val = sinpi( 0.5 );
 // returns 1
 
-val = sinPi( 0.9 );
+val = sinpi( 0.9 );
 // returns ~0.309
 ```
 
@@ -39,13 +39,13 @@ val = sinPi( 0.9 );
 
 ``` javascript
 var linspace = require( 'compute-linspace' );
-var sinPi = require( 'math-sinpi' );
+var sinpi = require( 'math-sinpi' );
 
 var x = linspace( 0, 2, 100 );
 var i;
 
 for ( i = 0; i < x.length; i++ ) {
-	console.log( sinPi( x[ i ] ) );
+	console.log( sinpi( x[ i ] ) );
 }
 ```
 
@@ -136,4 +136,5 @@ Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 [testling]: https://ci.testling.com
 
 [compute-io]: https://github.com/compute-io/
-[sine]: https://en.wikipedia.org/wiki/Sine
+[math-sin]: https://github.com/math-io/sin
+[const-pi]: https://github.com/const-io/pi
