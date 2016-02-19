@@ -2,18 +2,29 @@
 
 import JSON
 
-x = linspace( -100*pi, 100*pi, 4000 )
-
+# Integer values:
+x = linspace( -2000, 2000, 2001 )
 y = sinpi( x )
-println( y )
 
 data = Dict([
 	("x", x),
 	("expected", y)
 ])
 
-outfile = open("./data.json", "w")
-JSON.json(data)
+outfile = open( "./integers.json", "w" )
+write( outfile, JSON.json(data) )
+close( outfile )
 
+
+# Decimal values:
+x = linspace( -100, 100, 2003 )
+y = sinpi( x )
+
+data = Dict([
+	("x", x),
+	("expected", y)
+])
+
+outfile = open( "./decimals.json", "w" )
 write( outfile, JSON.json(data) )
 close( outfile )

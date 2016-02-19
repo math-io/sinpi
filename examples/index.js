@@ -1,11 +1,11 @@
 'use strict';
 
 var linspace = require( 'compute-linspace' );
-var sinPi = require( './../lib' );
+var sinpi = require( './../lib' );
 
-var x = linspace( 0, 2, 100 );
+var x = linspace( -100, 100, 100 );
 var i;
 
 for ( i = 0; i < x.length; i++ ) {
-	console.log( sinPi( x[ i ] ) );
+	console.log( sinpi( x[ i ] ) );
 }

@@ -24,13 +24,13 @@ Computes `sin(πx)` more accurately than `sin(pi*x)`, especially for large `x`.
 
 
 ``` javascript
-var val = sinpi( 0 );
+var y = sinpi( 0 );
 // returns 0
 
-val = sinpi( 0.5 );
+y = sinpi( 0.5 );
 // returns 1
 
-val = sinpi( 0.9 );
+y = sinpi( 0.9 );
 // returns ~0.309
 ```
 
@@ -41,7 +41,7 @@ val = sinpi( 0.9 );
 var linspace = require( 'compute-linspace' );
 var sinpi = require( 'math-sinpi' );
 
-var x = linspace( 0, 2, 100 );
+var x = linspace( -100, 100, 100 );
 var i;
 
 for ( i = 0; i < x.length; i++ ) {
