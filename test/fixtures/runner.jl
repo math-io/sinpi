@@ -3,7 +3,7 @@
 import JSON
 
 # Integer values:
-x = linspace( -2000, 2000, 2001 )
+x = linspace( -1000, 1000, 2001 )
 y = sinpi( x )
 
 data = Dict([

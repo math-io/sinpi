@@ -3,8 +3,9 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var pinf = require( 'const-pinf-float64' );
-var ninf = require( 'const-ninf-float64' );
+var PINF = require( 'const-pinf-float64' );
+var NINF = require( 'const-ninf-float64' );
+var EPS = require( 'const-eps-float64' );
 var abs = require( 'math-abs' );
 var sinpi = require( './../lib/' );
 
@@ -28,10 +29,10 @@ tape( 'the function throws a range error if provided either positive or negative
 	t.end();
 
 	function foo() {
-		sinpi( pinf );
+		sinpi( PINF );
 	}
 	function bar() {
-		sinpi( ninf );
+		sinpi( NINF );
 	}
 });
 
@@ -59,7 +60,6 @@ tape( 'if provided an integer, the function returns `+-0`', function test( t ) {
 tape( 'the function computes `sin(πx)`', function test( t ) {
 	var expected;
 	var delta;
-	var tol;
 	var x;
 	var y;
 	var i;
@@ -72,8 +72,7 @@ tape( 'the function computes `sin(πx)`', function test( t ) {
 			t.equal( y, expected[ i ], 'x: '+x[i]+'. Expected: '+expected[i] );
 		} else {
 			delta = abs( y - expected[i] );
-			tol = 1e-15 * Math.max( 1, abs( y ), abs( expected[i] ) );
-			t.ok( delta <= tol, 'within tolerance. x: '+x[i]+'. Value: '+y+'. Expected: '+expected[i]+'. Tolerance: '+tol+'.' );
+			t.ok( delta <= EPS, 'within tolerance. x: '+x[i]+'. Value: '+y+'. Expected: '+expected[i]+'. Tolerance: '+EPS+'.' );
 		}
 	}
 	t.end();
