@@ -1,6 +1,6 @@
 {
   "name": "math-sinpi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Computes sin(πx).",
   "author": {
     "name": "Philipp Burckhardt",
